@@ -11,19 +11,25 @@ And you can learn uxed very fast as long as you had used ed before.<br>
 
 ## How to build?
 Follow the steps below: <br>
+
 ```
     make
 ```
+
 <br>
 Clean binaries <br>
+
 ```
     make clean
 ```
+
 <br>
 Do memory test <br>
+
 ```
     make memtest
 ```
+
 <br>
 Note: Compile with UNIX environment. Using gcc or clang.<br>
 
