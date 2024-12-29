@@ -10,7 +10,22 @@ Uxed is more small, quickly, portable than GNU ed. And it can do things well.<br
 And you can learn uxed very fast as long as you had used ed before.<br>
 
 ## How to build?
-Just do `gcc ed.c -o ed` in your UNIX shell. ;)<br>
+Follow the steps below: <br>
+```
+    make
+```
+<br>
+Clean binaries <br>
+```
+    make clean
+```
+<br>
+Do memory test <br>
+```
+    make memtest
+```
+<br>
+Note: Compile with UNIX environment. Using gcc or clang.<br>
 
 ## Have bugs?
 Take an issue or pull-request is the best way.<br>
