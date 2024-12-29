@@ -12,7 +12,10 @@ int readLine(int fd, int line_number, char *buffer, size_t buffer_size) {
 	char temp_buffer[32768];
 	int current_line = 0;
 	ssize_t bytes_read;
+	#pragma GCC diagnostic push
+	#pragma GCC diagnostic ignored "-Wunused-but-set-variable"
 	off_t offset = 0;
+	#pragma GCC diagnostic pop
 
 	lseek(fd, 0, SEEK_SET);						// Move to head
 

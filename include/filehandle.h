@@ -1,5 +1,12 @@
 #ifndef INCLUDE_FILEHANDLE_H_
-#define INCLUDE_FILEHANLDE_H_
+
+#ifdef _clang_
+#pragma once
+#endif
+
+#ifdef __GNUC__
+#define INCLUDE_FILEHANDLE_H_
+#endif
 
 #include <stdio.h>
 

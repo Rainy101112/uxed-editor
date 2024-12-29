@@ -1,5 +1,12 @@
 #ifndef INCLUDE_POOL_H_
-#define INCLUDE_POOL_H
+
+#ifdef _clang_
+#pragma once
+#endif
+
+#ifdef __GNUC__
+#define INCLUDE_POOL_H_
+#endif
 
 #include <stdio.h>
 
