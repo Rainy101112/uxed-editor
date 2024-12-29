@@ -1,6 +1,6 @@
 # uxed-editor
 ![](https://img.shields.io/badge/License-MIT-orange) ![](https://img.shields.io/badge/Software-Editor-blue) ![](https://img.shields.io/badge/Family-GNU%20ed-green)
-![](https://img.shields.io/badge/Language-C-magenta)
+![](https://img.shields.io/badge/Language-C-magenta) ![](https://img.shields.io/badge/Complier-GCC-grey) ![](https://img.shields.io/badge/Compiler-clang-grey)
 
 <br>
 
