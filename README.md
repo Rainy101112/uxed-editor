@@ -31,7 +31,7 @@ Do memory test <br>
 ```
 
 <br>
-**Note**: Compile with UNIX environment. Using gcc or clang.<br>
+**Note** : Compile with UNIX environment. Using gcc or clang.<br>
 
 ## Have bugs?
 Take an issue or pull-request is the best way.<br>
