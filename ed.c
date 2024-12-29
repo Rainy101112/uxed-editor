@@ -9,6 +9,7 @@ int fd = 0;					// File discription
 int showpmt = 0;			// Show prompt
 char *filepath;				// Current file path
 
+void getstr(char *buf);
 int modea();				// Command "a"
 int modei();				// Command "i"
 int looping();				// Command main loop
@@ -209,11 +210,31 @@ void poolListDesTroy(poolNode** pphead) {
 	*pphead = NULL;
 }
 
+void getstr(char *buf){
+	char temp = 0;
+	int i = 0;
+
+	while (1){
+		temp = (char)(getchar());
+
+		if (temp != '\n'){
+			buf[i] = temp;
+			i++;
+			continue;
+		} else {
+			buf[i] = '\0';
+			break;
+		}
+	}
+
+	return;
+}
+
 int modea(){
 	char command[32768];						// Max len(I know it is too small)
 
 	while (1){
-		scanf("%s", command);
+		getstr(command);
 
 		if ((!strcmp(command, ".")) != 1){
 			poolPushBack(&pool, command);		// Push current command into string pool(to the back)
@@ -249,7 +270,7 @@ int looping(){
 		if (showpmt == 1){						// Show prompt by this
 			printf("*");
 		}
-		scanf("%s", command);					// User input
+		getstr(command);
 
 		if ((!strcmp(command, "f")) == 1){		// Command "f"
 			printf("%s\n", filepath);
