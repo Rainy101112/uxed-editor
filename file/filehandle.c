@@ -68,7 +68,7 @@ int readLine(int fd, int line_number, char *buffer, size_t buffer_size) {
 	}
 
 	if (bytes_read == -1) {
-		perror("Error reading file");
+		printf("[%s %d] Error reading file.\n", __FILE__, __LINE__);
 		return -1;								// Failed
 
 	} else if (current_line < line_number) {
@@ -79,11 +79,24 @@ int readLine(int fd, int line_number, char *buffer, size_t buffer_size) {
 	return 0;									// Line not found
 }
 
+void getLine(int line, char *buffer){
+	char temp[32768];
+
+	int handle = readLine(fd, line, temp, sizeof(temp));
+
+	if (handle == 0){
+		
+	} else {
+		printf("[%s %d] Get line failed.\n", __FILE__, __LINE__);
+		return;
+	}
+}
+
 long long getFilesize(){
 	off_t size = lseek(fd, 0, SEEK_END);		// Get file size (offset)
 
 	if (size == -1) {					 		// Failed
-		printf("lseek failed");
+		printf("[%s %d] lseek failed.\n", __FILE__, __LINE__);
 		return -1;
 	} else {
 		return (long long)size;					/// File size may be really really long

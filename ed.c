@@ -42,7 +42,7 @@ int looping(){
 				while (pcur) {
 					ssize_t written = write(fd, pcur->data, strlen(pcur->data));
 					if (written == -1) {		// If write failed
-						printf("Write failed");
+						printf("[%s %d] Write failed.\n", __FILE__, __LINE__);
 						break;
 					}
 					pcur = pcur->next;			// Jump to next

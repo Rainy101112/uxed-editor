@@ -10,12 +10,12 @@ poolNode* pool = NULL;
 poolNode* poolAllocNode(char *data) {
 	poolNode* newNode = (poolNode*)malloc(sizeof(poolNode));
 	if (newNode == NULL){
-		printf("String pool allocates a node failed.\n");
+		printf("[%s %d] String pool allocates a node failed.\n", __FILE__, __LINE__);
 		return NULL;
 	}
 	newNode->data = (char *)malloc(strlen(data) + 1);
 	if (newNode->data == NULL) {
-		printf("Memory allocation failed.\n");
+		printf("[%s %d] Memory allocation failed.\n", __FILE__, __LINE__);
 		free(newNode);
 		return NULL;
 	}
