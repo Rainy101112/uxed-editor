@@ -1,4 +1,6 @@
 # uxed-editor
+![](https://img.shields.io/badge/License-MIT-orange) ![](https://img.shields.io/badge/Software-Editor-blue) ![](https://img.shields.io/badge/Family-GNU%20ed-green)
+![](https://img.shields.io/badge/Language-C-magenta)
 A simple text editor. Does things like GNU ed.<br>
 
 ## Why uxed?
